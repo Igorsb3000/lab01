@@ -57,6 +57,14 @@ void func_espaciais(int i){
 int main(int argc, char *argv[]){ 
 	std::string planas[] = {"retangulo","circulo","triangulo","quadrado"};
 	std::string espaciais[] = {"piramide", "cubo", "paralelepipedo", "esfera"};
+	if(argv[1] == NULL){
+		cout << "ERRO: parâmetro inválido!" << endl << endl;
+		cout << "As opções de parâmetro são:" << endl << endl;
+		cout << "*Figuras Planas: triangulo, retangulo, quadrado ou circulo junto das suas medidas." << endl << endl;
+		cout << "*Figuras Espaciais: piramide, cubo, paralelepipedo ou esfera junto das suas medidas." << endl << endl;
+		cout << "Ex: ./exe retangulo 5 3" << endl;
+		return 0;
+	}
 	std::string tipo_figura = argv[1];
 	//cout << argc << endl;
 	int *area = new int; 
@@ -79,7 +87,7 @@ int main(int argc, char *argv[]){
 			
 		}
 		if (!tipo_figura.compare(espaciais[i])){
-			func_planas(i, param[0], param[1], param[2]);
+			//func_planas(i, param[0], param[1], param[2]);
 		}
 	}
 
