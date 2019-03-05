@@ -13,10 +13,10 @@ int main(int argc, char *argv[]){
 	}
 	std::string tipo_figura = argv[1];
 
-	int *param = new int[argc-2];
+	double *param = new double[argc-2];
 	int j;
 	for(j=0; j<(argc-2); j++){
-		param[j] = atoi(argv[j+2]);
+		param[j] = strtod(argv[j+2], NULL);
 	} 
 
 	for (int i = 0; i < 4; i++){

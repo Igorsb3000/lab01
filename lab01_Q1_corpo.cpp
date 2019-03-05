@@ -1,6 +1,6 @@
 #include "lab01_Q1_cabecalho.hpp"
 
-void func_planas(int indice, int param1, int param2){
+void func_planas(double indice, double param1, double param2){
 	
 	double area, altura, base, perimetro, raio;
 
@@ -40,7 +40,7 @@ void func_planas(int indice, int param1, int param2){
 	}	
 	
 }
-void func_espaciais(int indice, int param1, int param2, int param3){
+void func_espaciais(double indice, double param1, double param2, double param3){
 
 	double area, altura, base, raio, volume, area_b, area_t, apotema, profundidade;
 
