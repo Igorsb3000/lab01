@@ -21,6 +21,7 @@ void func_seno(double radiano){
 	long double erro = 1; //Para caber mais casas decimais do erro
 	int k=0, N=0;
 
+	cout << "Caso A" << endl << endl; 
 	do{
 		seno = seno + (pow(-1,k)*pow(radiano,1+2*k))/fatorial(1+2*k);
 		cout << "seno A: " << seno << endl;
@@ -36,7 +37,7 @@ void func_seno(double radiano){
 	}while (erro > 0.0001 );
 	cout << endl;
 	//Caso em que o erro é < a)0.0001
-	cout << "Caso A:" << endl << endl;
+	cout << "Resultados caso A:" << endl << endl;
 	cout << "Seno de " << radiano << " : " << seno << endl;
 	cout << "erro: " << erro << "." << endl;
 	cout << "N: " << N << "." << endl;
@@ -45,7 +46,7 @@ void func_seno(double radiano){
 	seno = sin(radiano);
 	cout << "Seno da biblioteca de " << radiano << " : " << seno << endl << endl;
 
-
+	cout << "Caso B" << endl << endl; 
 	do{
 		seno = seno + (pow(-1,k)*pow(radiano,1+2*k))/fatorial(1+2*k);
 		cout << "seno B: " << seno << endl;
@@ -60,7 +61,7 @@ void func_seno(double radiano){
 	}while (erro > 0.00001 );
 	cout << endl;
 	//Caso em que o erro é < b)0.00001
-	cout << "Caso B:" << endl << endl;
+	cout << "Resultados caso B:" << endl << endl;
 	cout << "Seno de " << radiano << " : " << seno << endl;
 	cout << "erro: " << erro << "." << endl;
 	cout << "N: " << N << "." << endl;
@@ -68,7 +69,7 @@ void func_seno(double radiano){
 	seno = sin(radiano);
 	cout << "Seno da biblioteca de " << radiano << " : " << seno << endl << endl;
 
-
+	cout << "Caso C" << endl << endl; 
 	do{
 		seno = seno + (pow(-1,k)*pow(radiano,1+2*k))/fatorial(1+2*k);
 		cout << "seno C: " << seno << endl;
@@ -83,7 +84,8 @@ void func_seno(double radiano){
 	}while (erro > 0.000001 );
 	cout << endl;
 	//Caso em que o erro é < c)0.000001
-	cout << "Caso C:" << endl << endl;
+
+	cout << "Resultados caso C:" << endl << endl;
 	cout << "Seno de " << radiano << " : " << seno << endl;
 	cout << "erro: " << erro << "." << endl;
 	cout << "N: " << N << "." << endl;

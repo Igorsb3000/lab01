@@ -39,5 +39,19 @@ Questão 02:
 			11- Em seguida, digite 'continue' para ir para o próximo "break";
 			12- Digite "backtrace full"(imprime o valor do erro do item 'c');
 			13- Em seguida, digite "continue" chegar ao fim do programa;
+	
+	Inspeção das condições a-c(Profiling - Gprof):
+		O passo a passo é o seguinte:
+			1- Abra o terminal;
+			2- Digite "make";
+			3- Em seguida, execute o programa digitando './exe'  para gerar o arquivo gmon.out.
+			4- Agora, digite o comando 'gprof --brief -p ./exe' para exibir a tabela com informações referentes a tempo de execução, % de tempo gasto em cada função, quantidade de chamadas das 			funções, etc. 
+			5- Para uma análise mais profunda das chamadas das funções e melhor leitura dos dados, pode-se substituir o comando acima por 'gprof --brief -q ./exe'.
+	
+	Resultados da inspeção utilizando o Gprof:
+		Foi possível notar que as funções foram chamadas de acordo com o esperado. A função 'func_seno' foi chamada apenas uma vez pela função 'main' e as funções 'pow' e 'fatorial' foram chamadas 		mais vezes. Nota-se que a função 'fatorial' foi chamada também recursivamente, o que aumentou ainda mais o número de chamadas.
+		Contudo, não foi possível obter as informações de tempo de cada função, pois o programa foi executado muito rápido para gerar dados para o gprof. Para verificar qual foi a % de 		tempo gasto em cada função, foi necessário chamar a função 'func_seno' várias vezes, entre 1000-2000 e utilizar valores de entrada próximos aos extremos -pi e pi para que o Gprof gerasse dados 	 suficientes de tempo gasto.
+		Como resultado, notou-se que a função 'fatorial' teve a maior contribuição em tempo de execução. No caso em que foram chamadas 2000 vezes a função 'func_seno', verificou-se que a função 	  'fatorial' foi responsável por 94.28% do tempo total, que é coerente com o fato de que essa função é recursiva. Em segundo luga ficou a função 'func_seno' com 5.29% do tempo total, pois foi 		chamada 2000 vezes neste teste.
+		O tempo total de execução foi de 2.08 segundos, destes, 1.97s foram gastos na função 'fatorial' e 0,11s na função 'func_seno'. As demais funções não obtiveram tempo suficiente para serem 		registrados pelo gprof.		
 
 	
