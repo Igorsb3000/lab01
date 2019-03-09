@@ -1,15 +1,13 @@
 #Makefile QUESTAO 01
 
-all:	exe
+exe:	Q1.o	Q1_corpo.o
+	g++	-o	exe	Q1.o	Q1_corpo.o 
 
-exe:	lab01_Q1.o	lab01_Q1_corpo.o
-	g++	-o  exe	lab01_Q1.o	lab01_Q1_corpo.o 
+Q1.o:	Q1.cpp	Q1.h
+	g++	-c	Q1.cpp
 
-lab01_Q1.o:	lab01_Q1.cpp	lab01_Q1_cabecalho.hpp
-	g++ -c  lab01_Q1.cpp	-Wall -ansi -pedantic -g -O0
-
-lab01_Q1_corpo.o:	lab01_Q1_corpo.cpp	lab01_Q1_cabecalho.hpp
-	g++ -c  lab01_Q1_corpo.cpp	-Wall -ansi -pedantic -g -O0
+Q1_corpo.o:	Q1_corpo.cpp	Q1.h
+	g++	-c	Q1_corpo.cpp
 
 clean:
-	rm	-rf	*.o
+	rm -rf *.o
