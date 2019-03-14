@@ -45,6 +45,11 @@ void func_seno(double radiano){
 	seno = sin(radiano);
 	cout << "Seno da biblioteca de " << radiano << " : " << seno << endl << endl;
 
+	
+	N = 0;
+	k = 0;
+	seno = 0;
+
 
 	cout << "Caso B" << endl << endl; 
 	do{
@@ -69,6 +74,10 @@ void func_seno(double radiano){
 	//Usando a função da biblioteca
 	seno = sin(radiano);
 	cout << "Seno da biblioteca de " << radiano << " : " << seno << endl << endl;
+
+	N = 0;
+	k = 0;
+	seno = 0;
 
 
 	cout << "Caso C" << endl << endl; 
@@ -96,3 +105,4 @@ void func_seno(double radiano){
 	cout << "Seno da biblioteca de " << radiano << " : " << seno << endl << endl;
 
 }
+
