@@ -13,7 +13,7 @@ Dupla: Igor Silva Bento e Hilton Thallyson
 *Questão 02 - Tarefa 01: 
 	-> Como executar o programa:
 		1- Abra o terminal; 
-		2- Digite "make -f makefileQ2_1"; 
+		2- Digite "make"; 
 		3- Em seguida, "./exe"; 
 		4- Passe um valor em radiano entre -PI e PI;
 	
@@ -27,7 +27,7 @@ Dupla: Igor Silva Bento e Hilton Thallyson
 *Questão 02 - Tarefa 02: 
 	-> Como executar o programa: 
 		1- Abra o terminal; 
-		2- Digite "make -f makefileQ2_2"; 
+		2- Digite "make"; 
 		3- Em seguida, "./exe"; 
 		4- Passe um valor em radiano entre -PI e PI;
 
@@ -42,11 +42,11 @@ Dupla: Igor Silva Bento e Hilton Thallyson
 	-> Inspeção das condições a-c(GDB):
 		O passo a passo é o seguinte:
 			1- Abra o terminal;
-			2- Digite "make -f makefileQ2_2";
+			2- Digite "make";
 			3- Em seguida, digite 'gdb ./exe' para abrir o GDB;
-			4- Digite "break Q2_2_corpo.cpp:39"(linha de parada do item 'a');
-			5- Digite "break Q2_2_corpo.cpp:65"(linha de parada do item 'b');
-			6- Digite "break Q2_2_corpo.cpp:90"(linha de parada do item 'c');
+			4- Digite "break Q2_2_corpo.cpp:37"(linha de parada do item 'a');
+			5- Digite "break Q2_2_corpo.cpp:63"(linha de parada do item 'b');
+			6- Digite "break Q2_2_corpo.cpp:88"(linha de parada do item 'c');
 			7- Digite "run" para iniciar o programa, então ele irá parar no primeiro "break";
 			8- Digite "backtrace full"(imprime o valor do erro do item 'a');
 			9- Em seguida, digite 'continue' para ir para o próximo "break";
@@ -58,7 +58,7 @@ Dupla: Igor Silva Bento e Hilton Thallyson
 	-> Análise do código da Questão 02 - tarefa 2(Profiling - Gprof):
 		O passo a passo é o seguinte:
 			1- Abra o terminal;
-			2- Digite "make -f makefileQ2_2";
+			2- Digite "make";
 			3- Em seguida, execute o programa digitando './exe'  para gerar o arquivo gmon.out.
 			4- Agora, digite o comando 'gprof --brief -p ./exe' para exibir a tabela com informações referentes a tempo de execução, % de tempo gasto em cada função, quantidade de chamadas das funções, etc. 
 			5- Para uma análise mais profunda das chamadas das funções e melhor leitura dos dados, pode-se substituir o comando acima por 'gprof --brief -q ./exe'.
