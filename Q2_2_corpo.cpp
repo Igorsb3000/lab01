@@ -1,6 +1,4 @@
-#include <iostream>
-#include <cmath>
-#include "Q2.h"
+#include "Q2_2_cabecalho.h"
 //Função fatorial para auxiliar nas séries de Taylor
 double fatorial(int n){
 	if(n == 0)
@@ -25,8 +23,9 @@ void func_seno(double radiano){
 	do{
 		seno = seno + (pow(-1,k)*pow(radiano,1+2*k))/fatorial(1+2*k);
 		cout << "seno A: " << seno << endl;
+		//cout << "sin(A): " << sin(radiano) << endl; //Apenas para conferir os resultados manualmente
 		erro = seno - sin(radiano);
-		//cout << "seno A: " << seno_bibl << endl;
+
 		//Caso o erro for < 0, então multiplicamos por -1 para garantir que não terá numero negativo
 		if(erro < 0){
 			erro = erro*(-1);
@@ -46,10 +45,12 @@ void func_seno(double radiano){
 	seno = sin(radiano);
 	cout << "Seno da biblioteca de " << radiano << " : " << seno << endl << endl;
 
+
 	cout << "Caso B" << endl << endl; 
 	do{
 		seno = seno + (pow(-1,k)*pow(radiano,1+2*k))/fatorial(1+2*k);
 		cout << "seno B: " << seno << endl;
+		//cout << "sin(B): " << sin(radiano) << endl; //Apenas para conferir os resultados manualmente
 		erro = seno - sin(radiano);
 		//Caso o erro for < 0, então multiplicamos por -1 para garantir que não terá numero negativo
 		if(erro < 0){
@@ -69,10 +70,12 @@ void func_seno(double radiano){
 	seno = sin(radiano);
 	cout << "Seno da biblioteca de " << radiano << " : " << seno << endl << endl;
 
+
 	cout << "Caso C" << endl << endl; 
 	do{
 		seno = seno + (pow(-1,k)*pow(radiano,1+2*k))/fatorial(1+2*k);
 		cout << "seno C: " << seno << endl;
+		//cout << "sin(C): " << sin(radiano) << endl; //Apenas para conferir os resultados manualmente
 		erro = seno - sin(radiano);
 		//Caso o erro for < 0, então multiplicamos por -1 para garantir que não terá numero negativo
 		if(erro < 0){
@@ -84,7 +87,6 @@ void func_seno(double radiano){
 	}while (erro > 0.000001 );
 	cout << endl;
 	//Caso em que o erro é < c)0.000001
-
 	cout << "Resultados caso C:" << endl << endl;
 	cout << "Seno de " << radiano << " : " << seno << endl;
 	cout << "erro: " << erro << "." << endl;
